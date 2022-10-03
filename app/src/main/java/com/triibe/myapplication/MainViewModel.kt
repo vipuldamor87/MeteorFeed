@@ -14,8 +14,8 @@ class MainViewModel constructor( private  val repository: Repository) :ViewModel
     val newsList = MutableLiveData<FeedModel>()
     val errorMessage = MutableLiveData<String>()
 
-    fun getFeed(){
-        val response = repository.getFeed()
+    fun getFeed(start: String, end: String) {
+        val response = repository.getFeed(start,end)
         response.enqueue(object : Callback<FeedModel> {
             override fun onResponse(call: Call<FeedModel>, response: Response<FeedModel>) {
                 Log.e("Response",response.body().toString())

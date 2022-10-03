@@ -1,6 +1,6 @@
 package com.triibe.myapplication.model
 
-data class X20150907(
+data class MeteorData(
     val absolute_magnitude_h: Double,
     val close_approach_data: List<CloseApproachData>,
     val estimated_diameter: EstimatedDiameter,
